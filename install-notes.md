@@ -6,3 +6,7 @@ In order to get the tests working, I:
 - ran virtualenv using `brew install virtualenv`, then `python3.9 -m virtualenv .venv` within the directory
 - ran poetry install using `pip install poetry`, `poetry install`
 - tests now running successfully using `poetry run pytest`
+
+# Other considerations
+- I spent about 10-20 minutes adding tests
+- I spent an additional 20 minutes or so adding pydantic, to show what I would normally do in terms of schema validation.
