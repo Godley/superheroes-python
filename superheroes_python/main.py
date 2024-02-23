@@ -12,9 +12,9 @@ def battle(hero_name: str, villain_name: str) -> Character:
         raise Exception("Invalid input structure")
 
     for character in characters:
-        if character.name == hero_name and character.type == CharacterType.HERO.value:
+        if character.name == hero_name and character.type.value == CharacterType.HERO.value:
             hero = character
-        if character.name == villain_name and character.type == CharacterType.VILLAIN.value:
+        if character.name == villain_name and character.type.value == CharacterType.VILLAIN.value:
             villain = character
 
     if hero.weakness == villain_name:
