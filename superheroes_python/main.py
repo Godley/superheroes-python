@@ -17,7 +17,7 @@ def battle(hero_name: str, villain_name: str) -> Dict:
         if character["name"] == villain_name and character["type"] == "villain":
             villain = character
 
-    if hero["weakness"] == villain_name:
+    if hero.get("weakness") == villain_name:
         hero["score"] -= 1
 
     if hero is None or villain is None:
