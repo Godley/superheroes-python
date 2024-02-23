@@ -1,10 +1,10 @@
 import enum
-import json
 import logging
-from typing import Dict, Optional, List
+from typing import Optional, List
 
 import requests
 from pydantic import BaseModel, ConfigDict, ValidationError, Json
+
 
 CHARACTERS_URL = "https://s3.eu-west-2.amazonaws.com/build-circle/characters.json"
 
