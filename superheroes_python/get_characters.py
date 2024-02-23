@@ -29,12 +29,6 @@ class CharacterList(BaseModel):
     items: List[Character]
 
 def get_characters() -> Optional[List]:
-    """
-    1. Download from a given url
-    2. load it into a dictionary for now
-    3. return it
-    :return:
-    """
     result = requests.get(CHARACTERS_URL)
     if result.status_code != 200:
         raise Exception(f"Status code was {result.status_code}")
