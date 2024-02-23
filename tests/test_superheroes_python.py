@@ -46,8 +46,7 @@ def test_hero_name_in_villain_slot(mocker):
 def test_bad_input(mocker):
     mocker.patch(
         "superheroes_python.main.get_characters",
-        return_value=[Character(name="Winner", score=9.0, type="hero"),
-                                          Character(name="Loser", score=8.0, type="villain")])
+        return_value=None)
 
     with pytest.raises(Exception) as e_info:
         battle("Loser", "Winner")
